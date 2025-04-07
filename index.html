@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIŞVERİŞ LİSTESİ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="arkaplan"><img src="arkaplan.jpg" alt=""></div>
+    <div class="container">
+        <h1 class="title">DÜĞÜN ALIŞVERİŞ LİSTESİ</h1>
+        <div class="new-todo">
+            <form onsubmit="addItem(event)">
+                <input type="text" id="todo-input" placeholder="Ne alınacak?">
+                <button type="submit" class="add-button">EKLE</button>
+            </form>
+            <div class="todo-items-info">
+                <div class="items-statuses">
+                    <span class="active">Hepsi</span>
+                    <span>Alınmadı</span>
+                    <span>Alındı</span>
+                </div>
+            </div>
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items" id="todo-list">
+                <!-- Todo items will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+    <button class="scroll-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+</body>
+</html>
